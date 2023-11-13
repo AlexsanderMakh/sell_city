@@ -1,0 +1,427 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000; /* Черный фон в качестве резерва */
+	background-image: linear-gradient(to bottom, #165c13, #000); /* Переливающийся фон от темно-зеленого до черного */
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-image: url("/img/vegetable-2924245.jpg");
+	min-height: 100vh;
+	overflow-x: hidden;
+	font-family: "Oswald", sans-serif;
+	display: flex;
+	flex-direction: column;
+
+	/* Добавляем затемнение и тень */
+	box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Затемнение с помощью box-shadow */
+}
+
+header {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.8); /* Черный полупрозрачный фон для шапки */
+	color: #fff; /* Белый цвет текста для шапки */
+	font-family: Arial, sans-serif;
+}
+
+nav {
+	max-width: 1130px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	/* border: 2px solid red; */
+}
+nav ul {
+	text-shadow:
+		3px 2px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+
+.logo a,
+.logo_footer a {
+	flex: 1;
+	font-size: 24px;
+	font-weight: bold;
+	background: linear-gradient(to right, #048134, #1fa11b); /* Линейный градиент для логотипа */
+	-webkit-background-clip: text;
+	color: transparent; /* Сделаем текст логотипа прозрачным */
+	/* text-transform: uppercase; */
+}
+
+.logo_footer a {
+	font-size: 25px;
+	text-shadow:
+		1px 2px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+
+.logo_footer {
+	margin-top: 300px;
+}
+
+.title_h2 h2 {
+}
+
+h2 {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 55px;
+	text-shadow:
+		5px 6px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+.contacts {
+	display: flex;
+	justify-content: space-around;
+}
+
+.contacts a {
+	margin: 6px;
+}
+.contacts a img {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	width: 30px;
+}
+.contact-title {
+	color: #fff;
+}
+
+.container {
+	width: 100%;
+	/* border: 5px solid red; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu {
+	flex: 2;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	width: 800px;
+}
+
+.menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	justify-content: space-around;
+	background-color: #165c13; /* Темно-зеленый фон для меню */
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) inset; /* Обводка белого цвета сзади */
+	width: 700px;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.logo-image img {
+	border-radius: 40%;
+	position: absolute;
+	z-index: -1;
+	top: calc(20%);
+	right: 1200px;
+	right: calc(80% - 300px);
+}
+
+.logo-image .two {
+	top: calc(20%);
+	right: 200px;
+	left: calc(80% - 300px);
+}
+
+.menu a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+	display: block;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.menu a::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	border: 2px solid #fff; /* Белая обводка */
+	border-radius: 5px;
+	opacity: 0; /* Скроем обводку по умолчанию */
+	transition: opacity 0.2s ease;
+}
+
+.menu a:hover::before {
+	opacity: 1; /* При наведении обводка станет видимой */
+}
+
+.content {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	height: 500px;
+}
+
+.contact-form {
+	background: #165c13;
+	text-align: center;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	width: 260px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-group {
+	margin-bottom: 30px;
+}
+.form-group h3 {
+	color: #fff;
+	text-align: center;
+	font-size: 25px;
+	text-shadow:
+		5px 3px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"] {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+button[type="submit"] {
+	background: #0b3a03;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 15px;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+	transition: background 0.3s;
+	text-shadow:
+		3px 3px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+
+button[type="submit"]:hover {
+	background: #040606;
+}
+.content_form_number {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.social {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 350px;
+}
+
+.contacts_footer {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+	flex-direction: column;
+}
+
+.whatsapp,
+.telefon,
+.telegram,
+.mail {
+	text-align: center; /* Выравниваем контент по центру горизонтально */
+}
+
+.whatsapp a,
+.telefon a,
+.telegram a,
+.mail a {
+	display: flex; /* Применяем flex-контейнер для выравнивания элементов по вертикали */
+	align-items: center; /* Выравнивание элементов по вертикали по центру */
+	justify-content: center; /* Выравнивание элементов по горизонтали по центру */
+	text-decoration: none; /* Убираем подчеркивание для ссылки */
+	text-shadow:
+		1px 1px 2px rgb(209, 162, 162),
+		0 0 1em rgb(127, 255, 53),
+		0 0 0.2em rgb(24, 26, 2);
+	font-size: 22px;
+	color: #fff;
+}
+
+.whatsapp img,
+.telefon img,
+.telegram img,
+.mail img {
+	margin-right: 10px; /* Добавляем отступ справа от изображения для разделения от текста */
+}
+
+.contacts_footer img {
+	width: 45px;
+}
+
+footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer_container {
+	width: 800px;
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (max-width: 1300px) {
+	.logo_footer {
+		margin-top: 260px;
+	}
+}
+@media (max-width: 1060px) {
+	.logo_footer {
+		margin-top: 260px;
+	}
+	nav {
+		width: 895px;
+	}
+	.menu ul {
+		width: 500px;
+	}
+}
+@media (max-width: 882px) {
+	.logo_footer {
+		margin-top: 165px;
+	}
+	.menu ul {
+		width: 350px;
+	}
+	nav {
+		width: 70%;
+		justify-content: center;
+		font-size: 20px;
+	}
+	.logo a {
+		font-size: 17px;
+	}
+	.menu a {
+		font-size: 15px;
+	}
+}
+@media (max-width: 450px) {
+	nav {
+		width: 330px;
+	}
+	.menu ul {
+		width: 150px;
+	}
+	.contacts a img {
+		width: 20px;
+	}
+
+	.content {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+	}
+	.logo a {
+		font-size: 10px;
+	}
+	.menu {
+		width: 170px;
+	}
+	.menu a {
+		font-size: 10px;
+	}
+
+	.container_title h2 {
+		font-size: 25px;
+	}
+
+	.container .card_object {
+		width: 223px;
+	}
+
+	.container h1 {
+		font-size: 20px;
+	}
+	#location-list {
+		line-height: 2;
+	}
+	.is-sticky-column {
+		width: 170px;
+	}
+	.card {
+		width: 175px;
+	}
+
+	.container_title h2 {
+		font-size: 15px;
+	}
+	.is-sticky-column {
+		width: 125px;
+	}
+
+	.footer_container {
+		width: 350px;
+	}
+	.content {
+		height: auto;
+	}
+	.content_form_number {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.title_h2 {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	.title_h2 h2 {
+		display: flex;
+		width: 90%;
+		font-size: 25px;
+	}
+	.contacts_footer {
+		margin-top: 35px;
+	}
+}

@@ -1,0 +1,709 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+	background-image: linear-gradient(to bottom, #165c13, #000);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-image: url("/img/back_index.jpg");
+	overflow-x: hidden;
+	font-family: "Oswald", sans-serif;
+	position: relative;
+	z-index: -3;
+
+	/* Добавляем затемнение и тень */
+	box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Затемнение с помощью box-shadow */
+}
+html,
+body {
+	scroll-behavior: smooth;
+}
+
+header {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+
+	color: #fff; /* Белый цвет текста для шапки */
+	font-family: Arial, sans-serif;
+	position: relative;
+	z-index: 1;
+}
+
+nav {
+	max-width: 1130px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	/* border: 2px solid red; */
+}
+nav li {
+	text-shadow:
+		3px 2px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+
+.logo a {
+	flex: 1;
+	font-size: 24px;
+	font-weight: bold;
+	background: linear-gradient(to right, #048134, #1fa11b); /* Линейный градиент для логотипа */
+	-webkit-background-clip: text;
+	color: transparent; /* Сделаем текст логотипа прозрачным */
+	/* text-transform: uppercase; */
+}
+.contacts {
+	display: flex;
+	justify-content: space-around;
+}
+
+.contacts a {
+	margin: 6px;
+}
+.contacts a img {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	width: 30px;
+}
+
+.container {
+	width: 100%;
+	/* border: 5px solid red; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: -1;
+}
+
+.menu {
+	flex: 2;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	z-index: 1;
+	width: 800px;
+}
+
+.menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	justify-content: space-around;
+	background-color: #165c13; /* Темно-зеленый фон для меню */
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) inset; /* Обводка белого цвета сзади */
+	width: 700px;
+	border-radius: 5px;
+	padding: 10px;
+	z-index: 1;
+}
+
+.menu a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+	display: block;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.menu a::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	border: 2px solid #fff; /* Белая обводка */
+	border-radius: 5px;
+	opacity: 0; /* Скроем обводку по умолчанию */
+	transition: opacity 0.2s ease;
+}
+
+.menu a:hover::before {
+	opacity: 1; /* При наведении обводка станет видимой */
+}
+
+.menu ul .dropdown-menu {
+	display: none;
+}
+
+/* Скрыть выпадающее меню по умолчанию */
+.dropdown-menu {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+/* Показать выпадающее меню при наведении на элемент с классом "dropdown" */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+	display: block;
+	opacity: 1;
+	position: absolute;
+	z-index: 1;
+}
+
+/* Скрыть выпадающее меню по умолчанию */
+.dropdown-menu {
+	display: none;
+	opacity: 0;
+	position: absolute;
+	transition: opacity 0.3s ease-in-out; /* Анимация плавного появления и исчезновения */
+	width: 200px;
+	z-index: 1;
+}
+.dropdown ul {
+	width: 220px;
+
+	top: 35px;
+}
+
+/* Отобразить выпадающее меню при наведении на элемент с классом "dropdown" */
+.dropdown:hover .dropdown-menu {
+	display: block;
+	opacity: 1;
+	z-index: 1;
+}
+
+/* При наведении на выпадающее меню оно остается видимым */
+.dropdown-menu:hover {
+	display: block;
+	opacity: 1;
+}
+
+.dropdown {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	position: relative;
+	top: 0;
+}
+
+/* Добавьте стили по желанию, чтобы настроить внешний вид меню */
+/* Отображение выпадающего меню внизу пункта */
+
+/* Конец меню */
+
+.social-icons {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.social-icon {
+	margin-right: 10px;
+}
+
+.social-icon:last-child {
+	margin-right: 0;
+}
+
+.social-icon img {
+	width: 30px;
+	height: 30px;
+}
+
+.content {
+	position: relative;
+	width: 1100px;
+	background-size: cover;
+	background-position: center;
+	min-height: 400px; /* Минимальная высота блока, чтобы картинка была видна */
+	z-index: 1;
+}
+.content::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 580px;
+
+	z-index: -2;
+}
+
+/* ... (ваш текущий CSS код) ... */
+
+.content {
+	position: relative;
+	/* border: 3px solid red; */
+	min-height: 250px; /* Минимальная высота блока, чтобы картинка была видна */
+	padding: 40px 0; /* Отступы сверху и снизу */
+}
+
+.content .title {
+	display: flex;
+	margin-top: 60px;
+	text-transform: uppercase;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	font-size: 55px;
+	color: #fff;
+	text-shadow:
+		5px 6px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+
+.content .sub_title {
+	display: flex;
+	font-size: 28px;
+	line-height: 45px;
+	justify-content: center;
+	margin-top: 50px;
+	color: #e5e5e5;
+	text-shadow:
+		5px 4px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+
+.content .content-container {
+	max-width: 800px; /* Максимальная ширина ограниченного блока */
+	margin: 0 auto; /* Центрирование блока по горизонтали */
+}
+
+.content .image-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.content .image-container img {
+	width: 100%;
+	height: auto;
+}
+
+.content .image-container .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3); /* Прозрачный темный слой */
+}
+
+.subtitle {
+	text-align: center;
+	padding: 40px 0;
+	color: #fff; /* Белый цвет текста */
+}
+
+.subtitle h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.subtitle p {
+	font-size: 18px;
+	line-height: 1.6;
+}
+/* Стили для слайдера */
+.screen_obj_file {
+	width: 100%;
+}
+
+.slider {
+	display: flex;
+	justify-content: center;
+	width: 1000px;
+	margin: 20px;
+}
+.slider .slide img {
+	width: 800px;
+	height: 1000px;
+}
+.swiper {
+	width: 1220px;
+	height: 280px;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+}
+.screen_obj {
+	width: 100%;
+	/* border: 3px solid red; */
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (max-width: 760px) {
+	.swiper-button-next {
+		right: 20px;
+		transform: rotate(90deg);
+	}
+
+	.swiper-button-prev {
+		left: 20px;
+		transform: rotate(90deg);
+	}
+}
+
+.object {
+	position: relative;
+}
+
+.screen_obj {
+	width: 100%;
+	margin-top: 50px;
+	/* border: 3px solid red; */
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.screen_obj .screen_obj_title {
+	width: 800px;
+	color: #fff;
+	text-align: center;
+	font-size: 37px;
+	font-size: clamp(18px, 5vw, 40px);
+	text-shadow:
+		5px 2px 1px rgb(1, 5, 8),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+
+.slide-image {
+	position: absolute;
+	top: 0;
+	left: -100%; /* Start from left outside the container */
+	transition: left 0.5s ease; /* Transition for smooth sliding */
+}
+
+.slide-in {
+	left: 0; /* Slide in to the container */
+}
+
+.about_us {
+	width: 100%;
+	/* border: 3px solid red; */
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.about_us .about_us_title {
+	width: 800px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	font-size: 60px;
+	color: #fff;
+	margin: 20px;
+	text-shadow:
+		5px 6px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+
+.about_us .about_us_sub_ {
+	width: 1150px;
+	color: #fff;
+	font-size: 25px;
+	margin: 20px;
+	text-shadow:
+		4px 3px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+
+.about_us .about_us_sub_ .clickable-link a {
+	text-shadow: none;
+	
+	cursor: pointer;
+	color: #eaf095;
+	text-decoration: underline;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.footer-logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.footer-icons {
+	display: flex;
+	gap: 15px; /* Расстояние между иконками */
+}
+
+.footer-icon img {
+	width: 30px; /* Размер иконок */
+	height: 30px;
+}
+
+.services {
+	width: 100%;
+	height: 350px;
+}
+
+.services .title {
+	display: flex;
+	justify-content: center;
+	font-size: 26px;
+	color: #43b103;
+}
+.services .sub-title {
+	display: flex;
+	height: 250px;
+	flex-direction: column;
+	margin: 10px;
+	width: 1800px;
+	justify-content: center;
+	font-size: 20px;
+	color: #eaf095;
+}
+
+.about-us {
+	width: 100%;
+	height: auto;
+	background-image: url(/img/indoor-plant-textures-details.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.title-about-us {
+	justify-content: center;
+	text-align: center;
+	font-size: 25px;
+	color: #245829;
+}
+
+.subtitle-about-us {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.submit-about-us-text {
+	width: 800px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-size: 20px;
+}
+footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer {
+	width: 100%;
+}
+
+.footer_container {
+	width: 700px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+.footer_container .logo a {
+	text-shadow:
+		1px 2px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+
+.about_us_sub_ .uslugi {
+		margin-top: 15px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: flex-start;
+
+	}
+
+@media (max-width: 1300px) {
+	nav {
+		width: 970px;
+	}
+
+	.menu ul {
+		width: 550px;
+	}
+
+	.content .title {
+		font-size: 50px;
+	}
+	.content .sub_title {
+		font-size: 25px;
+		margin-top: 27px;
+	}
+
+	.swiper {
+		width: 1180px;
+	}
+
+	.about_us {
+		width: 100%;
+	}
+
+	.about_us .about_us_sub_ {
+		width: 800px;
+	}
+
+}
+@media (max-width: 1000px) {
+	nav {
+		width: 770px;
+	}
+	.menu ul {
+		width: 350px;
+	}
+	.logo a {
+		font-size: 17px;
+	}
+	.menu a {
+		font-size: 15px;
+	}
+	.content .title {
+		font-size: 50px;
+	}
+	.content .sub_title {
+		font-size: 25px;
+		margin-top: 27px;
+	}
+
+	.swiper {
+		width: 880px;
+	}
+	.swiper img {
+		width: 350px;
+	}
+}
+
+@media (max-width: 780px) {
+	body {
+		overflow-x: hidden;
+	}
+	nav {
+		width: 675px;
+	}
+	.menu ul {
+		width: 300px;
+	}
+	.swiper {
+		width: 580px;
+		height: auto;
+	}
+	.content {
+		width: 100%;
+	}
+	.swiper img {
+		width: 250px;
+		height: 200px;
+	}
+	.about_us .about_us_sub_ {
+		width: 550px;
+		margin: 0;
+	}
+	.screen_obj .screen_obj_title {
+		width: 600px;
+	}
+	.screen_obj_file {
+		width: 600px;
+	}
+}
+
+@media (max-width: 450px) {
+	nav {
+		width: 430px;
+	}
+	.menu ul {
+		width: 190px;
+	}
+	.contacts a img {
+		width: 20px;
+	}
+
+	.content {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+	}
+	.logo a {
+		font-size: 13px;
+	}
+	.menu a {
+		font-size: 10px;
+	}
+	.content .title {
+		font-size: 26px;
+		width: 80%;
+	}
+
+	.content .sub_title {
+		font-size: 16px;
+		width: 90%;
+	}
+
+	.screen_obj .screen_obj_title {
+		width: 400px;
+	}
+	.screen_obj_file {
+		width: 350px;
+	}
+	/* Уменьшаем размер слайдера и изображений */
+	.swiper {
+		max-width: 350px; /* Измените на желаемую ширину */
+		margin: 0 auto;
+	}
+
+	.swiper-slide img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* Скрываем кнопки навигации и пагинацию */
+	.swiper-button-next,
+	.swiper-button-prev,
+	.swiper-pagination {
+		display: none;
+	}
+
+	.about_us .about_us_title {
+		width: 200px;
+	}
+	.about_us .about_us_sub_ {
+		width: 350px;
+		margin: 0;
+		font-size: 19px;
+	}
+	.footer_container {
+		width: 90%;
+	}
+
+	
+}

@@ -1,0 +1,602 @@
+body {
+	background-image: url("/img/indoor-plant-textures-details.jpg");
+	background-size: cover;
+	background-position: center;
+	min-height: 800px;
+	font-family: "Roboto", sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+	background-image: linear-gradient(to bottom, #165c13, #000);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-image: url("/img/indoor-plant-textures-details.jpg");
+	overflow-x: hidden;
+	font-family: "Oswald", sans-serif;
+	position: relative;
+	z-index: -3;
+
+	/* Добавляем затемнение и тень */
+	box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Затемнение с помощью box-shadow */
+}
+
+header {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	color: #fff; /* Белый цвет текста для шапки */
+	font-family: Arial, sans-serif;
+}
+
+nav {
+	max-width: 1130px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	/* border: 2px solid red; */
+}
+
+nav li {
+	text-shadow:
+		3px 2px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+
+.logo a,
+.logo_footer a {
+	flex: 1;
+	font-size: 24px;
+	font-weight: bold;
+	background: linear-gradient(to right, #048134, #1fa11b); /* Линейный градиент для логотипа */
+	-webkit-background-clip: text;
+	color: transparent; /* Сделаем текст логотипа прозрачным */
+	/* text-transform: uppercase; */
+}
+
+.logo_footer a {
+	text-shadow:
+		1px 2px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+.container h1 {
+	text-shadow:
+		5px 2px 2px rgb(0 0 0),
+		0 0 1em rgb(52 120 12),
+		0 0 0.2em rgb(24, 26, 2);
+}
+.menu {
+	flex: 2;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	width: 800px;
+}
+
+.menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	justify-content: space-around;
+	background-color: #165c13; /* Темно-зеленый фон для меню */
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) inset; /* Обводка белого цвета сзади */
+	width: 700px;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+#location-list {
+	padding: 20px;
+	line-height: 3;
+	color: #fff;
+}
+
+.menu a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+	display: block;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.menu a::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	border: 2px solid #fff; /* Белая обводка */
+	border-radius: 5px;
+	opacity: 0; /* Скроем обводку по умолчанию */
+	transition: opacity 0.2s ease;
+}
+
+.menu a:hover::before {
+	opacity: 1; /* При наведении обводка станет видимой */
+}
+.contacts {
+	display: flex;
+	justify-content: space-around;
+}
+
+.container_title {
+	color: #fff;
+	text-align: center;
+}
+.container_title h2 {
+	text-shadow:
+		5px 6px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+	font-size: 40px;
+}
+
+.contacts a {
+	margin: 6px;
+}
+.contacts a img {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	width: 30px;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	color: #fff;
+	flex-wrap: wrap;
+}
+
+.card_object {
+	width: 1030px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card h2 {
+	text-shadow:
+		5px 3px 2px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+
+.card p {
+	text-shadow:
+		3px 6px 5px rgb(0 0 0),
+		0 0 1em rgb(94, 255, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+
+.card button {
+	background: #165c13;
+	border-radius: 10px;
+	font-size: 18px;
+	color: #fff;
+	text-shadow:
+		2px 2px 2px rgb(0 0 0),
+		0 0 1em rgb(0 0 0),
+		0 0 0.2em rgb(234 255 0);
+	width: 170px;
+	height: 42px;
+}
+
+.pagination {
+	width: 100%;
+}
+
+#cards-container {
+}
+
+/* Стили для закрепленного блока */
+.is-sticky-column {
+	position: sticky;
+	top: 20px; /* Расстояние сверху, на котором блок будет "закреплен" */
+	z-index: 100; /* Поднимите блок над остальным содержимым, если это необходимо */
+	background: linear-gradient(to top, rgb(22, 36, 27), rgb(36 133 33)); /* Фоновый цвет закрепленного блока */
+	border-radius: 20px;
+	padding: 10px; /* Отступы для блока */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для блока (по вашему усмотрению) */
+	width: 210px;
+}
+
+/* Стили для заголовка виджета */
+
+.is-divider h1 {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+li button {
+	background: #165c13;
+	border-radius: 8px;
+	color: #fff;
+	font-size: 17px;
+	width: 110px;
+}
+#location-list {
+	list-style: none;
+	padding: 0;
+}
+
+#location-list li {
+	margin: 5px 0;
+}
+
+#location-list button {
+	background: #165c13;
+	border-radius: 8px;
+	color: #fff;
+	font-size: 17px;
+	width: 110px;
+	border: none;
+	border-radius: 8px;
+	color: #fff;
+	font-size: 17px;
+	width: 110px;
+	padding: 5px 10px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+#location-list button.active {
+	background: #336d31;
+}
+
+/* Стили для списка */
+.is-sticky-column .woocommerce-widget-layered-nav-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Стили для элементов списка */
+.is-sticky-column .woocommerce-widget-layered-nav-list li {
+	margin-bottom: 5px;
+}
+
+#location-list a {
+	color: #ffffff;
+	text-shadow:
+		1px 2px 2px rgb(0 0 0),
+		0 0 1em rgb(0, 0, 0),
+		0 0 0.2em rgb(24, 26, 2);
+}
+/* Добавьте другие необходимые стили по вашему усмотрению */
+
+.card {
+	background: linear-gradient(to bottom, #16241b, #2d7c2a);
+}
+
+/* Стили для карточек объектов */
+.card {
+	border: 1px solid #ccc;
+	margin: 10px;
+	padding: 10px;
+	max-width: 400px;
+	height: 400px;
+	float: left;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+
+/* Стили для изображений */
+.card img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+/* Стили для карточек объектов */
+.card {
+	border: 1px solid #ccc;
+	margin: 10px;
+	padding: 10px;
+	width: 300px;
+	float: left;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 420px;
+}
+
+/* Стили для изображений */
+.card img {
+	max-width: 100%;
+	height: 195px;
+}
+
+/* Стили для модального окна */
+#modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+#modal-content {
+	background-color: white;
+	max-width: 80%;
+	margin: 100px auto;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#close-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.container .card_object {
+	/* border: 2px solid red; */
+	width: 1050px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+}
+
+footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer_container {
+	width: 800px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Добавьте CSS для анимации появления и исчезания объектов */
+/* CSS для анимации исчезновения и появления */
+.card.hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.card {
+	/* Добавьте ваши стили карточки */
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.card-enter {
+	opacity: 0;
+	transform: translateY(20px);
+	transition:
+		opacity 0.3s ease,
+		transform 0.3s ease;
+}
+
+.card-enter-active {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.card-exit {
+	opacity: 1;
+	transform: translateY(0);
+	transition:
+		opacity 0.3s ease,
+		transform 0.3s ease;
+}
+
+.card-exit-active {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+#prev-page {
+	width: 185px;
+	border: 2px solid #FFF;
+	box-shadow: 0px -6px 10px rgb(47, 0, 255);
+	color: #FFF;
+	font-size: 15px;
+	height: 51px;
+	background-color: rgb(8, 161, 46);
+	border-radius: 40%;
+	transition: 2s;
+	
+}
+#prev-page:hover  {
+	border: 2px solid #FFF;
+	box-shadow: 0px -6px 10px rgb(47, 0, 255);
+	color: #FFF;
+
+	background-color: rgb(131, 131, 131);
+	transition: 1s;
+
+	
+}
+#next-page:hover {
+	border: 2px solid #FFF;
+	box-shadow: 0px -6px 10px rgb(255, 0, 0);
+	color: #000000;
+
+	background-color: rgb(208, 212, 7);
+	transition: 1s;
+}
+#next-page {
+	width: 185px;
+	border: 2px solid #FFF;
+	box-shadow: 0px -6px 10px rgb(47, 0, 255);
+	color: #FFF;
+	font-size: 15px;
+	height: 51px;
+	background-color: rgb(8, 161, 46);
+	border-radius: 40%;
+	transition: 2s;
+}
+@media (max-width: 1300px) {
+	nav {
+		width: 970px;
+	}
+
+	.menu ul {
+		width: 550px;
+	}
+
+	.content .title {
+		font-size: 50px;
+	}
+	.content .sub_title {
+		font-size: 25px;
+		margin-top: 27px;
+	}
+
+	.swiper {
+		width: 1180px;
+	}
+
+	.about_us {
+		width: 100%;
+	}
+
+	.about_us .about_us_sub_ {
+		width: 800px;
+	}
+	.container .card_object {
+		width: 800px;
+	}
+	.card {
+		width: 288px;
+	}
+	.swiper-slide {
+		width: 250px;
+	}
+		.pagination {
+		width: 81%;
+		display: flex;
+		justify-content: space-evenly;
+	}
+}
+
+@media (max-width: 1000px) {
+	nav {
+		width: 770px;
+	}
+
+	.menu ul {
+		width: 350px;
+	}
+
+	.content .title {
+		font-size: 40px;
+	}
+	.content .sub_title {
+		font-size: 25px;
+		margin-top: 27px;
+	}
+
+	.swiper {
+		width: 1180px;
+	}
+
+	.about_us {
+		width: 100%;
+	}
+
+	.about_us .about_us_sub_ {
+		width: 800px;
+	}
+	.container .card_object {
+		width: 660px;
+	}
+	.card {
+		width: 288px;
+	}
+}
+
+@media (max-width: 450px) {
+	nav {
+		width: 330px;
+	}
+	.menu ul {
+		width: 150px;
+	}
+	.contacts a img {
+		width: 20px;
+	}
+
+	.content {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+	}
+	.logo a {
+		font-size: 10px;
+	}
+	.menu {
+		width: 170px;
+	}
+	.menu a {
+		font-size: 10px;
+	}
+
+	.container_title h2 {
+		font-size: 25px;
+	}
+
+	.container .card_object {
+		width: 223px;
+	}
+
+	.container h1 {
+		font-size: 20px;
+	}
+	#location-list {
+		line-height: 2;
+	}
+	.is-sticky-column {
+		width: 170px;
+	}
+	.card {
+		width: 100%;
+	}
+
+	.container_title h2 {
+		font-size: 15px;
+	}
+	.is-sticky-column {
+		width: 125px;
+	}
+
+	.footer_container {
+		width: 350px;
+	}
+	#prev-page, #next-page {
+		width: 80px;
+		height: 30px;
+		font-size: 10px;
+		justify-content: space-between;
+	}
+	#prev-page:hover, #next-page:hover {
+		font-size: 10px;
+	}
+}
